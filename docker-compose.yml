@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:latest
+    container_name: mariadb_belajar_nest_js
+    environment:
+      MARIADB_ROOT_PASSWORD: root_password
+      MARIADB_DATABASE: belajar_nest_js
+      MARIADB_USER: kunam
+      MARIADB_PASSWORD: manuk
+    ports:
+      - "3122:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  mariadb_data:
